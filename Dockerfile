@@ -5,6 +5,6 @@ RUN npm ci
 COPY src .
 COPY tsconfig.json .
 RUN npm run build
-COPY src/views ./views
+COPY src/views ./dist/views
 EXPOSE 8080
 ENTRYPOINT [ "node", "dist/server.js" ]
